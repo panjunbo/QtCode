@@ -1,5 +1,6 @@
 QT       += core gui
 
+QT       += network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -19,12 +20,14 @@ SOURCES += \
     main.cpp \
     tcpIpClient.cpp \
     tcpIpServer.cpp \
-    tcpIpServerClient.cpp
+    tcpIpServerClient.cpp \
+    tcpIpSocket.cpp
 
 HEADERS += \
     tcpIpClient.h \
     tcpIpServer.h \
-    tcpIpServerClient.h
+    tcpIpServerClient.h \
+    tcpIpSocket.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

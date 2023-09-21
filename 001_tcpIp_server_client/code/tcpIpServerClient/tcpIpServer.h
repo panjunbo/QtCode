@@ -2,6 +2,7 @@
 #define TCPIPSERVER_H
 
 #include <QWidget>
+#include "tcpIpSocket.h"
 
 namespace Ui {
 class tcpIpServer;
@@ -17,6 +18,11 @@ public:
 
 private:
     Ui::tcpIpServer *ui;
+protected:
+    QList <tcpIpSocket> serveSocketList;
+
+protected slots:
+    void slot_start_clicked(bool checked);
 };
 
 #endif // TCPIPSERVER_H
